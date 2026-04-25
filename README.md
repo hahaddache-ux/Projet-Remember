@@ -32,44 +32,10 @@
 ---
 
 ## 🚀 Technologies utilisées
-**Backend**
-- Node.js + Express
-- MySQL
-- JWT (jsonwebtoken)
-- Bcrypt (bcryptjs)
-- CORS + Dotenv
-
 **Frontend**
 - React + Vite
 - CSS (Login.css, StatusDashboard.css, Wizard.css)
 - Axios
-
-## Structure du projet
-PROJET-REMEMBER/
-├── backend/
-│   ├── middleware/
-│   │   └── auth.js
-│   ├── routes/
-│   │   ├── auth.js
-│   │   ├── documents.js
-│   │   └── users.js
-│   ├── .env
-│   ├── db.js
-│   ├── schema.sql
-│   └── server.js
-└── remember/
-└── src/
-├── data/
-│   └── documentTypes.js
-├── hooks/
-│   └── useApp.js
-├── pages/
-│   ├── DocumentSelectPage.jsx
-│   ├── LoginPage.jsx
-│   ├── NotificationSetupPage.jsx
-│   └── StatusDashboard.jsx
-├── App.jsx
-└── main.jsx
 
 ### Backend
 - **Node.js / Express.js** — API REST
