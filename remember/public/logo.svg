@@ -1,0 +1,15 @@
+<svg width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Clipboard Icon -->
+  <rect x="5" y="10" width="40" height="45" rx="6" fill="url(#blueGrad)" />
+  <rect x="15" y="5" width="20" height="10" rx="3" fill="#1e3a8a" />
+  <path d="M18 35 L25 42 L38 28" stroke="#10b981" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- "Remember" Text -->
+  <text x="55" y="44" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="34" fill="#f8fafc">Remember</text>
+</svg>

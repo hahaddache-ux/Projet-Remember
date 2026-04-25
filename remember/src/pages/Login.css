@@ -1,0 +1,222 @@
+/* ─── LOGIN PAGE ──────────────────────────────────────────────────────────── */
+.login-root {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Logo image */
+.login-logo-img {
+    width: 380px;
+    max-width: 100%;
+    filter: drop-shadow(0 4px 24px rgba(240, 192, 64, 0.35));
+}
+
+
+@media (max-width: 900px) {
+    .login-root {
+        grid-template-columns: 1fr;
+    }
+
+    .login-left {
+        display: none;
+    }
+}
+
+/* Left panel */
+.login-left {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 64px;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.login-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.login-brand-icon {
+    font-size: 48px;
+}
+
+.login-brand-name {
+    font-size: 42px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: -0.03em;
+}
+
+.login-tagline {
+    font-size: 20px;
+    color: rgba(226, 232, 240, 0.85);
+    line-height: 1.6;
+    margin-bottom: 48px;
+}
+
+.login-tagline span {
+    color: var(--accent-light);
+    font-weight: 600;
+}
+
+.login-stats {
+    display: flex;
+    gap: 32px;
+}
+
+.login-stat {
+    text-align: center;
+}
+
+.login-stat-n {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+}
+
+.login-stat-l {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 4px;
+}
+
+/* Right panel */
+.login-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: var(--bg-primary);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-card-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--accent), #4338ca);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 auto 16px;
+    box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.login-card-header h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+}
+
+.login-card-header p {
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.forgot-password-link {
+    background: none;
+    border: none;
+    color: var(--accent-light);
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    padding: 0;
+}
+
+.forgot-password-link:hover {
+    opacity: 1;
+    color: white;
+}
+
+.login-error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+    color: #f87171;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.pwd-toggle {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px;
+    transition: color var(--transition);
+}
+
+.pwd-toggle:hover {
+    color: var(--text-primary);
+}
+
+.login-switch {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.login-switch button {
+    background: none;
+    border: none;
+    color: var(--accent-light);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: inherit;
+    text-decoration: underline;
+}
+
+.login-switch button:hover {
+    color: white;
+}
+
+/* Spinner */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: inline-block;
+}

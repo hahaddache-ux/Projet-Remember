@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Environment variables (IMPORTANT - مشاركيهاش أبدا)
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build output (React)
+/remember/build/
+/remember/dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
