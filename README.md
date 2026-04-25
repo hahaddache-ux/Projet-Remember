@@ -32,11 +32,44 @@
 ---
 
 ## 🚀 Technologies utilisées
+**Backend**
+- Node.js + Express
+- MySQL
+- JWT (jsonwebtoken)
+- Bcrypt (bcryptjs)
+- CORS + Dotenv
 
-### Frontend
-- **React.js** — Interface utilisateur
-- **Tailwind CSS** — Design moderne et responsive
-- **Axios** — Communication avec l'API
+**Frontend**
+- React + Vite
+- CSS (Login.css, StatusDashboard.css, Wizard.css)
+- Axios
+
+## Structure du projet
+PROJET-REMEMBER/
+├── backend/
+│   ├── middleware/
+│   │   └── auth.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── documents.js
+│   │   └── users.js
+│   ├── .env
+│   ├── db.js
+│   ├── schema.sql
+│   └── server.js
+└── remember/
+└── src/
+├── data/
+│   └── documentTypes.js
+├── hooks/
+│   └── useApp.js
+├── pages/
+│   ├── DocumentSelectPage.jsx
+│   ├── LoginPage.jsx
+│   ├── NotificationSetupPage.jsx
+│   └── StatusDashboard.jsx
+├── App.jsx
+└── main.jsx
 
 ### Backend
 - **Node.js / Express.js** — API REST
@@ -45,14 +78,29 @@
 
 ---
 
-## 📂 Structure du projet
-Projet-Remember/
+## Structure du projet
+PROJET-REMEMBER/
 ├── backend/
-│   ├── middleware/       # Authentification JWT
-│   ├── routes/           # Routes API
-│   ├── db.js             # Connexion MySQL
-│   ├── server.js         # Point d'entrée
-│   ├── schema.sql        # Structure de la base de données
-│   └── .env              # Variables d'environnement (non partagé)
-│
-└── remember/             # Frontend React
+│   ├── middleware/
+│   │   └── auth.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── documents.js
+│   │   └── users.js
+│   ├── .env
+│   ├── db.js
+│   ├── schema.sql
+│   └── server.js
+└── remember/
+└── src/
+├── data/
+│   └── documentTypes.js
+├── hooks/
+│   └── useApp.js
+├── pages/
+│   ├── DocumentSelectPage.jsx
+│   ├── LoginPage.jsx
+│   ├── NotificationSetupPage.jsx
+│   └── StatusDashboard.jsx
+├── App.jsx
+└── main.jsx
